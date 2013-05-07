@@ -46,10 +46,7 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 1000px;
-    color: #474747;
-    @include font;
-    font-size: 15px;
+    font-size: 11px;
     line-height: 1.4;
 }
 a{
@@ -75,17 +72,218 @@ a{
 .wrap {
     @extend %clr;
 }
+.ui-body-c {
+    color: #bd4900;
+    text-shadow: none;
+    font-weight: normal;
+    @include got_m;
+    .ui-link {
+        color: #bd4900;
+        text-shadow: none;
+        @include got_m;
+    }
+}  
+.ui-page {
+    background: url(../img/body-bg.jpg) 0 0 repeat;
+    background-size: auto 100%;
+    @include got_m;
+    font-size: 11px;
+}
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
+.ui-header {
+    box-shadow: 0 1px 0 rgba(0,0,0,.2);
+    border: 0;
+    text-shadow: 0 1px 1px #000;
+    background: url(../img/header-bg.png) 0 0 repeat-x;
+    background-size: auto 100%;
+    .ui-btn {
+        padding: 5px 3px;
+    }
+    .ui-btn-inner {
+        @include icon-svg(menu, 24, 18);
+        padding: 0;
+        border-radius: 0;
+    }
+    .ui-title {
+        font-size: 18px;
+        @include hel_b;
+    }
+}
+.ui-btn {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #bd4900;
+    background-image: linear-gradient(#ff7900, #ff5500);
+    &:hover {
+        background-image: linear-gradient(#ff5500, #ff7900);
+    }
+}
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.ui-field-contain {
+    border: 0;
+    .ui-btn {
+        margin: 0 auto;
+        width: 81px;
+        height: 26px;
+        color: #fff; 
+        text-shadow: 0 1px 0 #bd4900;
+        border: 1px solid #BD4900;
+        box-shadow: none;
+        &:hover {
+           color: #fff;
+        }
+        .ui-btn-inner {
+            padding: 4px 0 0;
+            border: 0;
+        }
+        .ui-btn-text {
+            font-size: 11px;
+        }
+    }
+}
+.ui-input-text {
+    width: 80px;
+    background: #eacb97;
+    border: 1px solid #da9945;
+    @include placeholder(#bd4900, Arial);
+    text-shadow: none;
+    text-align: left;
+    height: 32px;
+    font-size: 10px !important;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 #fff;
+}
+
+.fb-connect-link {
+    margin: 20px auto 10px;
+    display: block;
+    width: 140px;
+    height: 23px;
+    background: url(../img/fb-connect.png) 0 0 no-repeat;
+    @include background-size(100%, 100%);
+}
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
-.footer {
+.ui-footer {
+    height: 65px;
+    border: 0;
+    background: none;
+    overflow: visible;
+    .ui-btn-inner {
+        border: 0;
+    }
+    .ui-btn-text {
+        color: #fff;
+        font-size: 12px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.6);
+    }
+    .footer-nav {
+        position: absolute;
+        z-index: 2;
+        color: #fff;
+        font-size: 12px;
+        text-decoration: none;
+        @include hel_m;
+        text-shadow: 0 1px 1px rgba(0,0,0,.6);
+    }
+    .footer-nav_joystick {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+}
+.footer-wrap {
     position: relative;
-    height: 120px;
+    height: 65px;
+    border: 0;
+    background: none;
+    border-radius: 7px 7px 0 0;
+    border-color: #bd4B17;
+    border-width: 0 2px 2px 2px;
+    border-style: solid;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 61px;
+        border-top: 2px solid #BD4B17;
+        background: url(../img/footer-bg.png) 0 0 repeat-x;
+        background-size: auto 100%;
+    }
+    &:before {
+        left: 0;
+        right: 50%;
+        margin-left: -53px;
+    }
+    &:after {
+        left: 50%;
+        right: 0;
+        margin-left: 53px;
+    }
+}
+.footer-midlle {
+    position: absolute;
+    left: 50%;
+    margin-left: -53px;
+    width: 106px;
+    height: 63px;
+    background: url(../img/footer-m.png) 0 0 no-repeat;
+    background-size: auto 100%;
+}
+
+.footer-nav_cards {
+    left: 35px;
+    top: 40px;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        margin-left: -19px;
+        top: -32px;
+        @include icon-svg(cards, 38, 30);  
+    }
+}
+.footer-nav_cards.is-active {
+    &:before {
+        @include icon-svg(cards-act, 38, 30);  
+    }
+}
+.footer-nav_places {
+    right: 35px;
+    top: 40px;
+     &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        margin-left: -12px;
+        top: -32px;
+        @include icon-svg(places, 24, 32);  
+    }
+}
+.footer-nav_places.is-active {
+    &:before {
+        margin-left: -19px;
+        @include icon-svg(places-act, 38, 30);  
+    }
+}
+.footer-nav_joystick {
+    left: 50%;
+    top: -35px;  
+    margin-left: -42px !important;  
+    @include icon-svg(joystick, 85, 85);
+    &:hover {
+        @include icon-svg(joystick, 85, 85);
+    }
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */

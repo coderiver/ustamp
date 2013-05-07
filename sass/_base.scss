@@ -3,12 +3,45 @@
 @import "lib/keyframes";
 @import "lib/media";
 @import "lib/ceaser-easing/ceaser";
+@font-face {
+  font-family: 'Conv_HelveticaNeueCyr-Roman';
+  src: local('☺'), url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_HelveticaNeueCyr-Medium';
+  src: local('☺'), url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_HelveticaNeueCyr-Bold';
+  src: local('☺'), url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_Gotham-Light';
+  src: local('☺'), url('../fonts/Gotham-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_Gotham-Medium';
+  src: local('☺'), url('../fonts/Gotham-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 // gradients for ie
 $experimental-support-for-svg: true;
 
 // global sprites
 $icons: sprite-map("icons/*.png", $spacing: 10px);
+
+// svg icons url
+$icons-svg: "icons-svg/";
 
 // responsive
 $break-small: 500px;
@@ -154,10 +187,43 @@ $break-large: 1180px;
   @include background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2));
 }
 
+// SVG icon 
+// include for global icon`s class
+@mixin is-icon-svg {
+  display: inline-block;
+}
+// include for current icon`s class
+@mixin icon-svg($name, $width, $height) {
+    width: $width + px;
+    height: $height + px;
+    background-image: inline-image($icons-svg + $name + ".svg");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}  
 
 // fonts
-@mixin font {
+@mixin hel_r {
     font-weight: normal;
     font-style: normal;
-    font-family: 'Custom font', sans-serif;
+    font-family: 'Conv_HelveticaNeueCyr-Roman', sans-serif;
+}
+@mixin hel_m {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Conv_HelveticaNeueCyr-Medium', sans-serif;
+}
+@mixin hel_b {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Conv_HelveticaNeueCyr-Bold', sans-serif;
+}
+@mixin got_l {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Conv_Gotham-Light', sans-serif;
+}
+@mixin got_m {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Conv_Gotham-Medium', sans-serif;
 }
