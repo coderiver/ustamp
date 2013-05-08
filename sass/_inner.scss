@@ -32,6 +32,15 @@
 				border-top-width: 1px;
 			}
 		}
+		.ui-btn-active {
+			background: rgba(159,109,0,.1);
+			.ui-icon {
+				@include icon-svg(arr1-act, 6, 11); 
+			}
+			.message-text {
+				color: #71320b;
+			}
+		}
 		.ui-btn-inner {
 			border: 0;
 		}
