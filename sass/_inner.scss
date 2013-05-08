@@ -19,3 +19,51 @@
 	margin: 0 auto;
 	width: 90%;
 }
+
+// messages page
+.messages-content {
+	.ui-listview {
+		box-shadow: none;
+		.ui-btn {
+			background: none;
+			border-width: 0 0 1px 0;	
+			border-radius: 0;
+		}
+		.ui-btn-inner {
+			border: 0;
+		}
+		.ui-li-thumb {
+			position: static;
+			float: none;
+			margin-right: 7px;
+			padding-right: 10px;
+			width: 37px;
+			height: 37px;
+			border-radius: 0;
+			border-right: 1px solid #bd4900;
+			vertical-align: middle;
+		}
+		.ui-link-inherit {
+			padding-left: 10px !important;
+			min-height: 50px !important;
+			box-sizing: border-box;
+		}
+		.ui-icon {
+			@include icon-svg(arr1, 6, 11); 
+			background-color: transparent;
+			border-radius: 0;
+			background-position: 0 0;
+			box-shadow: none;
+		}
+	}
+}
+
+.message-text {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+	font-size: 12px;
+	line-height: 15px;
+	color: #bd4900;
+	text-shadow: none;
+}
