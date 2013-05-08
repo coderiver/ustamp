@@ -80,3 +80,39 @@
 	color: #bd4900;
 	text-shadow: none;
 }
+
+// My cards page
+.my-cards-content {
+	padding: 10px !important;
+}
+.my-card {
+	position: relative;
+	display: block;  
+	margin-bottom: 10px;
+	height: 100px;
+	background-size: cover;
+	border-radius: 5px;
+	box-shadow: 0 0 7px rgba(0,0,0,.6);
+}
+.my-card__badge {
+	position: absolute;
+	right: 0;
+	bottom: 13px;
+	padding: 3px 12px 3px 7px;
+	border-radius: 5px 0 0 5px;
+	background: -webkit-linear-gradient(left, #f50, #ff7900);
+	background: linear-gradient(left, #f50, #ff7900);
+}
+.my-card__place {
+	display: block;
+	color: #fff;
+	@include hel_b;
+	font-size: 15px;
+	text-shadow: 0 1px 0 #bd4900;
+}
+.my-card__place-info {
+	font-size: 12px;
+	color: #bd4900;
+	@include hel_m;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}

@@ -85,7 +85,7 @@ a{
 }  
 .ui-page {
     background: url(../img/body-bg.jpg) 0 0 repeat;
-    background-size: auto 100%;
+    background-size: 50% 50%;
     @include got_m;
     font-size: 11px;
 }
@@ -186,7 +186,7 @@ a{
     .footer-nav {
         position: absolute;
         z-index: 2;
-        color: #fff;
+        color: #fff !important;
         font-size: 12px;
         text-decoration: none;
         @include hel_m;
