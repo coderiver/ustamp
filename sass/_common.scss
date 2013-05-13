@@ -45,9 +45,16 @@ table {
 *{-webkit-text-size-adjust: none; }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
+.ui-mobile {
+    
+}
 body{
     font-size: 11px;
     line-height: 1.4;
+}
+.ui-mobile-viewport {
+    background: transparent url(../img/body-bg.jpg) 0 0 repeat;
+    background-size: 50% 50%;
 }
 a{
     color:#00919e;
@@ -84,10 +91,9 @@ a{
     }
 }  
 .ui-page {
-    background: url(../img/body-bg.jpg) 0 0 repeat;
-    background-size: 50% 50%;
     @include got_m;
     font-size: 11px;
+    background: none;  
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
@@ -139,6 +145,7 @@ a{
         .ui-btn-inner {
             padding: 4px 0 0;
             border: 0;
+            line-height: 1;
         }
         .ui-btn-text {
             font-size: 11px;
@@ -156,8 +163,10 @@ a{
     font-size: 10px !important;
     box-sizing: border-box;
     box-shadow: 0 1px 0 #fff;
+    .ui-input-text {
+        box-shadow: none;
+    }
 }
-
 .fb-connect-link {
     margin: 20px auto 10px;
     display: block;
