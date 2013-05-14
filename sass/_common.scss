@@ -107,28 +107,53 @@ a{
     .ui-btn {
         padding: 5px 3px;
     }
-    .ui-btn-inner {
-        @include icon-svg(menu, 24, 18);
-        padding: 0;
-        border-radius: 0;
+    .btn-menu {
+        .ui-btn-inner {
+            @include icon-svg(menu, 24, 18);
+        }
+    }
+    .btn-goblet {
+        .ui-btn-inner {
+            @include icon-svg(goblet, 24, 18);
+        }
     }
     .ui-title {
         font-size: 18px;
         @include hel_b;
     }
 }
+
+/* -------------------------------------- //END Header ------------------------------------------ */
+
+/* ------------------------------------- Independent blocks -------------------------------------- */
+.ui-content {
+    .ui-btn {
+        box-shadow: 0 1px 0 rgba(255,255,255,.4);
+    }
+}
+
 .ui-btn {
     box-sizing: border-box;
     border-radius: 5px;
-    border: 2px solid #bd4900;
+    border: 1px solid #bd4900;
     background-image: linear-gradient(#ff7900, #ff5500);
     &:hover {
         background-image: linear-gradient(#ff5500, #ff7900);
     }
-}
-/* -------------------------------------- //END Header ------------------------------------------ */
+    .ui-btn-inner {
+        padding: 0;
+        border-radius: 0;
+        border: none;
+    }
+    .ui-btn-text {
+        font-size: 11px;
+        color: #fff;
+        @include got_m;
+        text-shadow: 0 1px 0 #bd4900;
+    }
 
-/* ------------------------------------- Independent blocks -------------------------------------- */
+}
+
 .ui-field-contain {
     border: 0;
     .ui-btn {

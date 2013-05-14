@@ -22,16 +22,18 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Conv_Gotham-Light';
-  src: local('☺'), url('../fonts/Gotham-Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'gotham-lightgotham-light';
+    src: local('☺'), url('../fonts/gothmlig-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 @font-face {
-  font-family: 'Conv_Gotham-Medium';
-  src: local('☺'), url('../fonts/Gotham-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'gotham-mediumgotham-medium';
+    src: local('☺'), url('../fonts/gothmmed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 // gradients for ie
@@ -220,10 +222,10 @@ $break-large: 1180px;
 @mixin got_l {
     font-weight: normal;
     font-style: normal;
-    font-family: 'Conv_Gotham-Light', sans-serif;
+    font-family: 'gotham-lightgotham-light', sans-serif;
 }
 @mixin got_m {
     font-weight: normal;
     font-style: normal;
-    font-family: 'Conv_Gotham-Medium', sans-serif;
+    font-family: 'gotham-mediumgotham-medium', sans-serif;
 }

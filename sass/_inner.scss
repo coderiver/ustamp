@@ -116,3 +116,76 @@
 	@include hel_m;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
+
+.btns-wrap {
+	display: inline-block;
+	padding-right: 24px;
+	background: url(../img/btns-wrap-bg.png) 100% 0 no-repeat;
+	-webkit-background-size: auto 100%;
+	        background-size: auto 100%;
+}
+.btn-equal {
+	width: 34px;
+	height: 34px;
+	line-height: 28px;
+	box-sizing: border-box;
+	.ui-btn-inner {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0;
+		margin: 0;
+	}
+	.ui-btn-text {
+		width: 0;
+	}
+}
+.btn-email {
+	.ui-btn-inner {
+		@include icon-svg(email, 17, 13);
+		overflow: visible;
+	}
+	.ui-btn-text {
+		position: absolute;
+		right: 16px;
+		top: -16px;
+		width: 16px;
+		height: 16px;
+		line-height: 15px;
+		box-sizing: border-box;
+		background: #bd4900;
+		border: 1px solid #ffe417;
+		border-radius: 50%;
+		font-size: 9px;
+		color: #fff;
+		text-align: center;
+		@include hel_m;
+	}
+}
+.btn-edit {
+	.ui-btn-inner {
+		@include icon-svg(edit, 13, 19);  
+	}
+}
+.btn-info {
+	.ui-btn-inner {
+		@include icon-svg(info, 18, 18);  
+	}
+}
+.bnt-enter-reg {
+	text-align: left;
+	padding-left: 7px;
+	width: 127px;
+}
+.btn-import {
+	float: right;
+	padding-right: 12px;
+	.ui-icon {
+		@include icon-svg(cards-act, 19, 18);
+		background-position: 0 0;  
+		background-color: transparent;
+		box-shadow: none;
+	}
+	.ui-btn-text {
+		margin-left: 35px;
+	}
+}
