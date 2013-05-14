@@ -23,11 +23,11 @@
 // messages page
 .messages-content {
 	.ui-listview {
-		box-shadow: none;
+		@include box-shadow(none);
 		.ui-btn {
 			background: none;
 			border-width: 0 0 1px 0;	
-			border-radius: 0;
+			@include border-radius(0);
 			&:first-child {
 				border-top-width: 1px;
 			}
@@ -51,22 +51,22 @@
 			padding-right: 10px;
 			width: 37px;
 			height: 37px;
-			border-radius: 0;
+			@include border-radius(0);
 			border-right: 1px solid #bd4900;
 			vertical-align: middle;
 		}
 		.ui-link-inherit {
 			padding-left: 10px !important;
 			min-height: 50px !important;
-			box-sizing: border-box;
+			@include box-sizing(border-box);
 		}
 		.ui-icon {
 			margin-top: -5px;
 			@include icon-svg(arr1, 6, 11); 
 			background-color: transparent;
-			border-radius: 0;
+			@include border-radius(0);
 			background-position: 0 0;
-			box-shadow: none;
+			@include box-shadow(none);
 		}
 	}
 }
@@ -91,7 +91,7 @@
 	margin-bottom: 10px;
 	height: 100px;
 	background-size: cover;
-	border-radius: 5px;
+	@include border-radius(5px);
 	box-shadow: 0 0 7px rgba(0,0,0,.6);
 }
 .my-card__badge {
@@ -99,9 +99,8 @@
 	right: 0;
 	bottom: 13px;
 	padding: 3px 12px 3px 7px;
-	border-radius: 5px 0 0 5px;
-	background: -webkit-linear-gradient(left, #f50, #ff7900);
-	background: linear-gradient(left, #f50, #ff7900);
+	@include border-radius(5px 0 0 5px);
+	@include background(linear-gradient(left, #f50, #ff7900));
 }
 .my-card__place {
 	display: block;
@@ -121,14 +120,13 @@
 	display: inline-block;
 	padding-right: 24px;
 	background: url(../img/btns-wrap-bg.png) 100% 0 no-repeat;
-	-webkit-background-size: auto 100%;
-	        background-size: auto 100%;
+	@include background-size(auto, 100%);
 }
 .btn-equal {
 	width: 34px;
 	height: 34px;
 	line-height: 28px;
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 	.ui-btn-inner {
 		display: inline-block;
 		vertical-align: middle;
@@ -151,10 +149,10 @@
 		width: 16px;
 		height: 16px;
 		line-height: 15px;
-		box-sizing: border-box;
+		@include box-sizing(border-box);
 		background: #bd4900;
 		border: 1px solid #ffe417;
-		border-radius: 50%;
+		@include border-radius(50%);
 		font-size: 9px;
 		color: #fff;
 		text-align: center;
@@ -183,7 +181,7 @@
 		@include icon-svg(cards-act, 19, 18);
 		background-position: 0 0;  
 		background-color: transparent;
-		box-shadow: none;
+		@include box-shadow(none);
 	}
 	.ui-btn-text {
 		margin-left: 35px;
@@ -209,4 +207,55 @@
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
+}
+
+.map {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.tooltip {
+	@include box-sizing(border-box);
+	padding: 8px;  
+	position: absolute;
+	z-index: 1000;
+	border: 1px solid #bd4900;
+	@include box-shadow(0 0 5px rgba(0,0,0,.5));
+	@include border-radius(5px);
+	@include background-image(linear-gradient(left, #f50, #ff7900));
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -4px;
+		right: 12px;
+		width: 5px;
+		height: 5px;
+		border: 1px solid #bd4900;
+		border-width: 0 1px 1px 0;
+		background: #ff7900;
+		@include rotate(45);
+		@include box-shadow(1px 2px 4px -1px rgba(0,0,0,.3));
+	}
+}
+.tooltip__img {
+	margin-right: 4px;
+}
+.tooltip__img,
+.tooltip__main {
+	display: inline-block;
+	vertical-align: middle;
+}
+.tooltip__title {
+	display: block;
+	@include hel_b;
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+}
+.tooltip__info {
+	font-size: 12px;
+	color: #bd4900;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }

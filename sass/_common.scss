@@ -99,11 +99,11 @@ a{
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .ui-header {
-    box-shadow: 0 1px 0 rgba(0,0,0,.2);
+    @include box-shadow(0 1px 0 rgba(0,0,0,.2));
     border: 0;
     text-shadow: 0 1px 1px #000;
     background: url(../img/header-bg.png) 0 0 repeat-x;
-    background-size: auto 100%;
+    @include background-size(auto, 100%);
     .ui-btn {
         padding: 5px 3px;
     }
@@ -124,7 +124,7 @@ a{
     .btn-prev {
         @include icon-svg(prev, 44, 33);  
         background-color: transparent;
-        box-shadow: none;
+        @include box-shadow(none);
         border: none;
         &:hover {
             @include icon-svg(prev-h, 44, 33);  
@@ -141,21 +141,21 @@ a{
 /* ------------------------------------- Independent blocks -------------------------------------- */
 .ui-content {
     .ui-btn {
-        box-shadow: 0 1px 0 rgba(255,255,255,.4);
+        @include box-shadow(0 1px 0 rgba(255,255,255,.4));
     }
 }
 
 .ui-btn {
-    box-sizing: border-box;
-    border-radius: 5px;
+    @include box-sizing(border-box);
+    @include border-radius(5px);
     border: 1px solid #bd4900;
-    background-image: linear-gradient(#ff7900, #ff5500);
+    @include background-image(linear-gradient(#ff7900, #f50));
     &:hover {
-        background-image: linear-gradient(#ff5500, #ff7900);
+        @include background-image(linear-gradient(#f50, #ff7900));
     }
     .ui-btn-inner {
         padding: 0;
-        border-radius: 0;
+        @include border-radius(0);
         border: none;
     }
     .ui-btn-text {
@@ -176,7 +176,7 @@ a{
         color: #fff; 
         text-shadow: 0 1px 0 #bd4900;
         border: 1px solid #BD4900;
-        box-shadow: none;
+        @include box-shadow(none);
         &:hover {
            color: #fff;
         }
@@ -199,10 +199,10 @@ a{
     text-align: left;
     height: 32px;
     font-size: 10px !important;
-    box-sizing: border-box;
-    box-shadow: 0 1px 0 #fff;
+    @include box-sizing(border-box);
+    @include box-shadow(0 1px 0 #fff);
     .ui-input-text {
-        box-shadow: none;
+        @include box-shadow(none);
     }
 }
 .fb-connect-link {
@@ -242,7 +242,7 @@ a{
     .footer-nav_joystick {
         background-color: transparent;
         border: none;
-        box-shadow: none;
+        @include box-shadow(none);
     }
 }
 .footer-wrap {
@@ -250,13 +250,13 @@ a{
     height: 65px;
     border: 0;
     background: none;
-    border-radius: 7px 7px 0 0;
+    @include border-radius(7px 7px 0 0);
     border-color: #bd4B17;
     border-width: 0 2px 2px 2px;
     border-style: solid;
-    box-sizing: border-box;
+    @include box-sizing(border-box);
     overflow: hidden;
-    border-radius: 10px 10px 0 0;
+    @include border-radius(10px 10px 0 0);
     &:before,
     &:after {
         content: "";
@@ -266,7 +266,7 @@ a{
         height: 61px;
         border-top: 2px solid #BD4B17;
         background: url(../img/footer-bg.png) 0 0 repeat-x;
-        background-size: auto 100%;
+        @include background-size(auto, 100%);
     }
     &:before {
         left: 0;
@@ -286,7 +286,7 @@ a{
     width: 106px;
     height: 63px;
     background: url(../img/footer-m.png) 0 0 no-repeat;
-    background-size: auto 100%;
+    @include background-size(auto, 100%);
 }
 
 .footer-nav_cards {
