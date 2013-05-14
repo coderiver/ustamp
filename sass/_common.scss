@@ -121,6 +121,19 @@ a{
         font-size: 18px;
         @include hel_b;
     }
+    .btn-prev {
+        @include icon-svg(prev, 44, 33);  
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        &:hover {
+            @include icon-svg(prev-h, 44, 33);  
+            background-color: transparent;
+        }
+        .ui-btn-inner {  
+            
+        }
+    }
 }
 
 /* -------------------------------------- //END Header ------------------------------------------ */

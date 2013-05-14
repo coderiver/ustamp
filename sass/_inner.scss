@@ -189,3 +189,24 @@
 		margin-left: 35px;
 	}
 }
+
+.camera {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -111px 0 0 -111px;
+	width: 222px;
+	height: 222px;
+	z-index: 1000;
+	@include icon-svg(camera, 222, 222);
+}
+.camera-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
