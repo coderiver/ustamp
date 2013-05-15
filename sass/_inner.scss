@@ -262,9 +262,12 @@
 
 .slider {
 	position: relative;
+	@include user-select; 
+	margin-top: 15px;
 }
 .slide {
-	//position: absolute;
+	position: absolute;
+	width: 100%;
 	height: 171px;
 	background: url(../img/slide.png) 0 0;
 	@include background-size(50%, 50%);
@@ -313,6 +316,9 @@
 		&:after {
 			display: none;
 		} 
+		.slide__qr {
+			@include rotate(10);
+		}
 	}
 	&:after {
 		content: "";
@@ -342,4 +348,26 @@
 	padding-left: 5px;
 	color: #7b4d0c;
 	text-shadow: 0 -1px 0 #000;
+}
+
+.slider-nav {
+	margin-top: 33px;
+	text-align: center;
+	button {
+		margin-right: 6px;
+		width: 8px;
+		height: 8px;
+		background: #d58434;
+		@include border-radius(50%);
+		@include box-shadow(0 1px 0 #fff);
+	}
+	.cycle-pager-active {
+		background: #894e14;
+	}
+}
+.slider-text {
+	margin-top: 5px;
+	text-align: center;
+	font-size: 12px;
+	text-shadow: 0 1px 0 #fff;
 }
