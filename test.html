@@ -1,0 +1,34 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.mobile-1.3.1.min.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.cycle2.shuffle.js"></script>
+</head>
+<body>
+<style type="text/css">
+    img {
+        position: absolute;
+    }
+</style>
+<div class="cycle-slideshow" 
+    data-cycle-fx=shuffle
+    data-cycle-timeout=3000
+    data-cycle-shuffle-top="25"
+    data-cycle-shuffle-left="-20"
+    data-cycle-reverse=true
+    data-cycle-hide-non-active=false
+    data-cycle-swipe=true 
+    >
+    <img src="http://malsup.github.com/images/p1.jpg" data-cycle-slide-css='{ "top": "-10px",  "left": "10px" }'>
+    <img src="http://malsup.github.com/images/p2.jpg" data-cycle-slide-css='{ "top": "20px",   "left": "20px" }'>
+    <img src="http://malsup.github.com/images/p3.jpg" data-cycle-slide-css='{ "top": "10px",   "left": "-10px" }'>
+    <img src="http://malsup.github.com/images/p4.jpg" data-cycle-slide-css='{ "top": "-20px",  "left": "-20px" }'>
+</div>
+</body>
+</html>

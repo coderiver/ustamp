@@ -14,24 +14,30 @@
     <div data-role="page">
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#" class="btn-menu"></a>
+            <a href="#leftpanel1" data-role="button" class="btn-menu"></a>
             <h1>Мои карточки</h1>
             <a href="#" class="btn-goblet"></a>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content" class="my-cards-content2">
-            <div class="btns-wrap">
-                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+            <!-- leftpanel1  -->
+            <div data-role="panel" id="leftpanel1" data-position="left" data-display="overlay">
+
+                <div class="btns-wrap">
+                    <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                    <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                    <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                    <div>
+                        <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                    </div>
+                    <div>
+                        <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                    </div>
                 </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
+
             </div>
+            <!-- /leftpanel1 -->
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
