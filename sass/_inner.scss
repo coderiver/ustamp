@@ -93,6 +93,7 @@
 	background-size: cover;
 	@include border-radius(5px);
 	box-shadow: 0 0 7px rgba(0,0,0,.6);
+	text-decoration: none;
 }
 .my-card__badge {
 	position: absolute;
