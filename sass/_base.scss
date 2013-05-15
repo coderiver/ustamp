@@ -189,6 +189,10 @@ $break-large: 1180px;
   @include background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2));
 }
 
+@mixin switch-on-gpu {
+    @include transform(translate3d(0,0,0));
+}
+
 // SVG icon 
 // include for global icon`s class
 @mixin is-icon-svg {

@@ -248,23 +248,18 @@ a{
 .footer-wrap {
     position: relative;
     height: 65px;
-    border: 0;
     background: none;
-    @include border-radius(7px 7px 0 0);
-    border-color: #bd4B17;
-    border-width: 0 2px 2px 2px;
-    border-style: solid;
+    @include border-radius(6px 6px 0 0);
+    border-bottom: 2px solid #bd4B17;
     @include box-sizing(border-box);
     overflow: hidden;
-    @include border-radius(10px 10px 0 0);
     &:before,
     &:after {
         content: "";
         position: absolute;
         top: 0;
         width: 50%;
-        height: 61px;
-        border-top: 2px solid #BD4B17;
+        height: 63px;
         background: url(../img/footer-bg.png) 0 0 repeat-x;
         @include background-size(auto, 100%);
     }
@@ -279,11 +274,29 @@ a{
         margin-left: 53px;
     }
 }
+.footer-wrap__left,
+.footer-wrap__right {
+    position: absolute;
+    top: 0;
+    width: 23px;
+    height: 63px;
+    z-index: 2;
+}
+.footer-wrap__left {
+    left: 0;
+    background: url(../img/footer-l.png) 0 0 no-repeat;
+    @include background-size(auto, 100%);
+}
+.footer-wrap__right {
+    right: 0;
+    background: url(../img/footer-r.png) 0 0 no-repeat;
+    @include background-size(auto, 100%);
+}
 .footer-midlle {
     position: absolute;
     left: 50%;
-    margin-left: -53px;
-    width: 106px;
+    margin-left: -108px;
+    width: 216px;
     height: 63px;
     background: url(../img/footer-m.png) 0 0 no-repeat;
     @include background-size(auto, 100%);
