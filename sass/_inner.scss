@@ -479,6 +479,7 @@
 		position: absolute;
 		left: 0;
 		top: 15px;
+		z-index: 2;
 	}
 }
 .icon_rest {
@@ -509,6 +510,7 @@
 	.ui-btn {
 		background: none;
 		border-width: 0 0 1px 0;
+		@include box-shadow(none);
 	}
 	.ui-btn-text {
 		font-size: 18px;
@@ -522,7 +524,7 @@
 	}
 	.ui-icon {
 		width: 52px;
-		height: 17px;
+		height: 18px;
 		@include border-radius(10px); 
 		background-position: 0 0;
 		background-color: transparent;
@@ -530,11 +532,11 @@
 		&:before {
 			content: "";
 			position: absolute;
-			top: 50%;
+			top: 50%;  
 			left: 3px;
 			margin-top: -6px;
 			width: 16px;
-			height: 11px;
+			height: 12px;
 			background: #eac07d;
 			@include border-radius(7px);
 		}
