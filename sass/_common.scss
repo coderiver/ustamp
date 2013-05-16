@@ -223,6 +223,9 @@ a{
     background: url(../img/fb-connect.png) 0 0 no-repeat;
     @include background-size(100%, 100%);
 }
+.ui-panel {
+    border: 0;
+}
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
@@ -282,6 +285,13 @@ a{
         left: 50%;
         right: 0;
         margin-left: 53px;
+    }
+    .ui-btn {
+        background-color: transparent;
+        @include background-image(none);
+        @include box-shadow(none);
+        border: 0;
+        @include border-radius(none);
     }
 }
 .footer-wrap__left,

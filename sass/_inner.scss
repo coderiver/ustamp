@@ -451,6 +451,10 @@
 	}
 	.ui-link {
 		color: #fff;
+		&:active,
+		&:visited {
+			color: #fff;
+		}
 	}
 }
 .explain__img {
@@ -464,6 +468,7 @@
 }
 .overlay {
 	position: absolute;
+	width: 100%;
 	top: 0;
 	right: 0;
 	bottom: 0;

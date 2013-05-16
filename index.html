@@ -8,61 +8,854 @@
     <link rel="stylesheet" href="css/screen.css">
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery.mobile-1.3.1.min.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.cycle2.shuffle.js"></script>
 </head>
 <body>
 
-    <!-- BEGIN page Messages -->
-    <div data-role="page" id="page1" class="jqm-demos" data-quicklinks="true">
+    <!-- BEGIN page QR info -->
+    <div data-role="page" id="qr-info">
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#" class="btn-menu"></a>
-            <h1>Сообщения</h1>
+            <a href="#" class="btn-prev" data-role="button"></a>
+            <h1>Наведите на QR-код</h1>
+            <a href="#" class="btn-info" data-role="button"></a>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content">
-            <a href="#page2">PAge 2</a>
+            <div class="explain">
+                <span class="explain__img"></span>
+                <p>Наведите камеру на qr-код и еще пару слов для детей природы.</p>
+                <a href="#camera">Закрыть</a>
+            </div>
+            <div class="overlay"></div>
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
         <div data-role="footer" data-id="fixfooter" data-position="fixed">
             <i class="footer-midlle"></i>
-            <a href="#" class="footer-nav footer-nav_joystick"></a>
             <div class="footer-wrap">
-                <a href="#" class="footer-nav footer-nav_cards  is-active">Карточки</a>
-                <a href="#" class="footer-nav footer-nav_places">Рядом</a>
+                <a href="#card-detail" class="footer-nav footer-nav_cards  is-active"  data-role="button">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places"  data-role="button">Рядом</a>
             </div>
         </div>
         <!-- END Footer -->
     </div>
-    <!-- END page Messages -->
+    <!-- END page QR info -->
 
-    <!-- BEGIN page about us -->
-    <div data-role="page" id="page2">
+    <!-- BEGIN page get QR -->
+    <div data-role="page" id="camera">
+        <!-- BEGIN menu  -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push">
+            <div class="btns-wrap">
+                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                </div>
+                <div>
+                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                </div>
+            </div>
+        </div>
+        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#" class="btn-menu"></a>
+            <a href="#menu" class="btn-menu" data-role="button"></a>
+            <h1>Наведите на QR-код</h1>
+            <a href="#qr-info" class="btn-info"></a>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content">
+            <i class="camera"></i>
+            <div class="camera-img">
+                <img src="http://lorempixel.com/1200/1200/sports/" alt="">
+            </div>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#card-detail" class="footer-nav footer-nav_cards">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page get QR -->
+
+   <!-- BEGIN page Card detail -->
+    <div data-role="page" id="card-detail">
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#camera" class="btn-prev"></a>
+            <h1>Aroma Espresso Bar</h1>
+            <a href="#about" class="btn-info"></a>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content">
+            <div class="slider-text">Выбери карточку интересующей акции</div>
+            <div class="slider-nav slider-nav_top"></div>
+            <div class="slider cycle-slideshow" 
+            data-cycle-slides="> div" 
+            data-cycle-pager-template="<button></button>" 
+            data-cycle-pager=".slider-nav" 
+            data-cycle-timeout=3000 
+            data-cycle-swipe=true 
+            data-cycle-fx=shuffle
+            data-cycle-shuffle-top="10"
+            data-cycle-shuffle-left="-5"
+            data-cycle-hide-non-active=false
+            >
+                <div class="slide" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+                    <div class="slide__top">
+                        Каждый 5-й американо в подарок
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+                <div class="slide" data-cycle-slide-css='{ "top": "10px",   "left": "10px" }'>
+                    <div class="slide__top">
+                        Каждый 5-й американо в подарок
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+            </div>
+            <div class="slider-text slider-text_bottom">
+                <img src="img/img.jpg" alt="">
+                <p>Каждый третий кофе - в подарок!</p>
+                <ul>
+                    <li>
+                        1.При покупке кофе с собой, Вы получаете у кассира (продавца) стикер*, который наклеивается в специальную ячейку бонусной карты.
+                    </li>
+                    <li>
+                        2.Собрав 5 стикеров - 6 кофе Вы получаете в подарок.**
+                        Чтобы получить бесплатный кофе, необходимо предъявить бонусную карту до заказа.
+                        Данное предложение распространяется на эспрессо, капучино, американо (любая порция)
+                    </li>
+                </ul>
+                
+                
+            </div>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <span class="footer-wrap__left"></span>
+                <span class="footer-wrap__right"></span>
+                <a href="#my-cards" class="footer-nav footer-nav_cards">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page Card detail -->
+
+    <!-- BEGIN page card-details-reward-granted -->
+    <div data-role="page" id="card-details-reward-granted">
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#" class="btn-prev"></a>
+            <h1>Aroma Espresso Bar</h1>
+            <a href="#about" class="btn-info"></a>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content">
+            <div class="slider-text">Выбери карточку интересующей акции</div>
+            <div class="slider-nav slider-nav_top"></div>
+            <div class="slider cycle-slideshow" 
+            data-cycle-slides="> div" 
+            data-cycle-pager-template="<button></button>" 
+            data-cycle-pager=".slider-nav" 
+            data-cycle-timeout=3000 
+            data-cycle-swipe=true 
+            data-cycle-fx=shuffle
+            data-cycle-shuffle-top="10"
+            data-cycle-shuffle-left="-5"
+            data-cycle-hide-non-active=false
+            >
+                <div class="slide slide_finish" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+                    <div class="slide__top">
+                        Поздравляем!
+                       <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                        <div class="slide__overlay"></div>
+                        <i class="icon-cup"></i>
+                        <span class="slide__message">Обратитесь к официанту за бесплатным кофе.</span>
+                    </div>
+                    <div class="slide__bottom">
+                        Готово!
+                    </div>
+                </div>
+                <div class="slide slide_finish" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+                    <div class="slide__top">
+                        Поздравляем!
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                        <div class="slide__overlay"></div>
+                        <i class="icon-cup"></i>
+                        <span class="slide__message">Обратитесь к официанту за бесплатным кофе.</span>
+                    </div>
+                    <div class="slide__bottom">
+                        Готово!
+                    </div>
+                </div>
+            </div>
+            <div class="slider-text slider-text_bottom">
+                <img src="img/img.jpg" alt="">
+                <p>Каждый третий кофе - в подарок!</p>
+                <ul>
+                    <li>
+                        1.При покупке кофе с собой, Вы получаете у кассира (продавца) стикер*, который наклеивается в специальную ячейку бонусной карты.
+                    </li>
+                    <li>
+                        2.Собрав 5 стикеров - 6 кофе Вы получаете в подарок.**
+                        Чтобы получить бесплатный кофе, необходимо предъявить бонусную карту до заказа.
+                        Данное предложение распространяется на эспрессо, капучино, американо (любая порция)
+                    </li>
+                </ul>
+                
+                
+            </div>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <div class="footer-wrap">
+                <span class="footer-wrap__left"></span>
+                <span class="footer-wrap__right"></span>
+                <a href="#my-cards" class="footer-nav footer-nav_cards">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page card-details-reward-granted -->
+
+    <!-- BEGIN page card-details-reward-redeemed -->
+    <div data-role="page" id="card-details-reward-redeemed">
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#" class="btn-prev"></a>
+            <h1>Aroma Espresso Bar</h1>
+            <a href="#about" class="btn-info"></a>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content">
+            <div class="slider-text">Выбери карточку интересующей акции</div>
+            <div class="slider-nav slider-nav_top"></div>
+            <div class="slider cycle-slideshow" 
+            data-cycle-slides="> div" 
+            data-cycle-pager-template="<button></button>" 
+            data-cycle-pager=".slider-nav" 
+            data-cycle-timeout=3000 
+            data-cycle-swipe=true 
+            data-cycle-fx=shuffle
+            data-cycle-shuffle-top="10"
+            data-cycle-shuffle-left="-5"
+            data-cycle-hide-non-active=false
+            >
+                <div class="slide slide_done" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+                    <div class="slide__top">
+                        Ну что, по новой!
+                       <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                        <div class="slide__overlay"></div>
+                    </div>
+                    <div class="slide__bottom">
+                        Готово!
+                    </div>
+                </div>
+                <div class="slide slide_done" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+                    <div class="slide__top">
+                        Ну что, по новой!
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                        <div class="slide__overlay"></div>
+                    </div>
+                    <div class="slide__bottom">
+                        Готово!
+                    </div>
+                </div>
+            </div>
+            <div class="slider-text slider-text_bottom">
+                <img src="img/img.jpg" alt="">
+                <p>Каждый третий кофе - в подарок!</p>
+                <ul>
+                    <li>
+                        1.При покупке кофе с собой, Вы получаете у кассира (продавца) стикер*, который наклеивается в специальную ячейку бонусной карты.
+                    </li>
+                    <li>
+                        2.Собрав 5 стикеров - 6 кофе Вы получаете в подарок.**
+                        Чтобы получить бесплатный кофе, необходимо предъявить бонусную карту до заказа.
+                        Данное предложение распространяется на эспрессо, капучино, американо (любая порция)
+                    </li>
+                </ul>
+                
+                
+            </div>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <div class="footer-wrap">
+                <span class="footer-wrap__left"></span>
+                <span class="footer-wrap__right"></span>
+                <a href="#my-cards" class="footer-nav footer-nav_cards">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page card-details-reward-redeemed -->
+
+    <!-- BEGIN page My card -->
+    <div data-role="page" id="my-cards">
+        <!-- BEGIN menu  -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push">
+            <div class="btns-wrap">
+                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                </div>
+                <div>
+                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                </div>
+            </div>
+        </div>
+        <!-- END menu -->
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#menu" class="btn-menu" data-role="button"></a>
+            <h1>Мои карточки</h1>
+            <a href="#filter" class="btn-goblet"></a>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content" class="my-cards-content">
+            <a href="#" class="my-card" style="background-image:url(http://lorempixel.com/800/100/);">
+                <span class="my-card__badge">
+                    <span class="my-card__place">Aroma Espresso Bar</span>
+                    <span class="my-card__place-info">Сеть (4 заведения)</span>
+                </span>
+            </a>
+            <a href="#" class="my-card" style="background-image:url(http://lorempixel.com/801/100/);">
+                <span class="my-card__badge">
+                    <span class="my-card__place">Aroma Espresso Bar</span>
+                    <span class="my-card__place-info">Сеть (4 заведения)</span>
+                </span>
+            </a>
+            <a href="#" class="my-card" style="background-image:url(http://lorempixel.com/802/100/);">
+                <span class="my-card__badge">
+                    <span class="my-card__place">Aroma Espresso Bar</span>
+                    <span class="my-card__place-info">Сеть (4 заведения)</span>
+                </span>
+            </a>
+            <a href="#" class="my-card" style="background-image:url(http://lorempixel.com/803/100/);">
+                <span class="my-card__badge">
+                    <span class="my-card__place">Aroma Espresso Bar</span>
+                    <span class="my-card__place-info">Сеть (4 заведения)</span>
+                </span>
+            </a>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#card-detail" class="footer-nav footer-nav_cards  is-active">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page My card -->
+
+    <!-- BEGIN page login -->
+    <div data-role="page" id="login">
+        <!-- BEGIN menu  -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push">
+            <div class="btns-wrap">
+                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                </div>
+                <div>
+                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                </div>
+            </div>
+        </div>
+        <!-- END menu -->
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#menu" class="btn-menu"></a>
+            <h1>Войти</h1>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content" class="login-content">
+            <div data-role="fieldcontain">
+                <input type="text" name="name" placeholder="E-mail">
+            </div>
+            <div data-role="fieldcontain">
+                <input type="password" name="name"placeholder="Пароль">
+            </div>
+            <div data-role="fieldcontain">
+                <button type="submit" name="submit" value="submit-value">Войти</button>
+            </div>
+            <a href="#" class="fb-connect-link"></a>
+            <a href="#" class="forgot-pass-link">Забыли пароль?</a>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#my-cards" class="footer-nav footer-nav_cards  is-active">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page login -->
+
+    <!-- BEGIN page creat account -->
+    <div data-role="page" id="register">
+        <!-- BEGIN menu  -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push">
+            <div class="btns-wrap">
+                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                </div>
+                <div>
+                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                </div>
+            </div>
+        </div>
+        <!-- END menu -->
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#menu" class="btn-menu"></a>
+            <h1>Создать аккаунт</h1>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content" class="login-content">
+            <div data-role="fieldcontain">
+                <input type="text" name="name" placeholder="E-mail">
+            </div>
+            <div data-role="fieldcontain">
+                <input type="password" name="name"placeholder="Пароль">
+            </div>
+            <div data-role="fieldcontain">
+                <button type="submit" name="submit" value="submit-value">Создать</button>
+            </div>
+            <a href="#" class="fb-connect-link"></a>
+            <p>Продолжая, вы соглашаетесь с нашим <a href="#">Пользовательским соглашением</a></p>
+            <p class="ha-ha-funny">И кстати, мы никогда не будем расространять вашу информацию либо слать вам спам.</p>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#my-cards" class="footer-nav footer-nav_cards  is-active">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page creat account -->
+
+    <!-- BEGIN page MAP -->
+    <div data-role="page" id="map">
+        <!-- BEGIN menu  -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push">
+            <div class="btns-wrap">
+                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                </div>
+                <div>
+                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                </div>
+            </div>
+        </div>
+        <!-- END menu -->
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#menu" class="btn-menu"></a>
+            <h1>Рядом со мной</h1>
+            <a href="#filter" class="btn-goblet"></a>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content">
+            <div class="map">
+                <a href="#card-detail" class="tooltip" style="left:100px;top:100px">
+                    <img class="tooltip__img" src="http://lorempixel.com/38/38/" alt="">
+                    <div class="tooltip__main">
+                        <span class="tooltip__title">AROMA</span>
+                        <span class="tooltip__info">ул. Прорезная, 100</span>
+                    </div>
+                </a>
+                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ru/?ie=UTF8&amp;ll=55.354135,40.297852&amp;spn=21.737349,67.631836&amp;t=m&amp;z=5&amp;output=embed"></iframe>
+            </div>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#my-cards" class="footer-nav footer-nav_cards">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page MAP -->
+
+    <!-- BEGIN page filter -->
+    <div data-role="page" id="filter">
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#" class="btn-prev"></a>
+            <h1>Фильтры</h1>
+            <a href="#about" class="btn-info"></a>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content" class="filter">
+            <form>
+                <fieldset data-role="controlgroup" data-iconpos="right">
+                    <div class="check-wrap">
+                        <i class="icon icon_rest"></i>
+                        <input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+                        <span class="check-counter">12</span>
+                        <label for="checkbox-h-6a">Рестораны</label>
+                    </div>
+                    <div class="check-wrap">
+                        <i class="icon icon_coffe"></i>
+                        <input type="checkbox" name="checkbox-h-7a" id="checkbox-h-7a">
+                        <span class="check-counter">33</span>
+                        <label for="checkbox-h-7a">Кофейни</label>
+                    </div>
+                    <div class="check-wrap">
+                        <i class="icon icon_parik"></i>
+                        <input type="checkbox" name="checkbox-h-8a" id="checkbox-h-8a">
+                        <span class="check-counter">56</span>
+                        <label for="checkbox-h-8a">Парикмахерские</label>
+                    </div>
+                    <div class="check-wrap">
+                        <i class="icon icon_cinema"></i>
+                        <input type="checkbox" name="checkbox-h-9a" id="checkbox-h-9a">
+                        <span class="check-counter">4</span>
+                        <label for="checkbox-h-9a">Кинотеатры</label>
+                    </div>
+                    <div class="check-wrap">
+                        <i class="icon icon_shop"></i>
+                        <input type="checkbox" name="checkbox-h-10a" id="checkbox-h-10a">
+                        <span class="check-counter">1</span>
+                        <label for="checkbox-h-10a">Магазины</label>
+                    </div>
+                    <div class="check-wrap">
+                        <i class="icon icon_club"></i>
+                        <input type="checkbox" name="checkbox-h-11a" id="checkbox-h-11a">
+                        <span class="check-counter">121</span>
+                        <label for="checkbox-h-11a">Ночные клубы</label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#my-cards" class="footer-nav footer-nav_cards  is-active">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page filter -->
+
+    <!-- BEGIN page about us -->
+    <div data-role="page" id="about">
+        <!-- BEGIN menu  -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push">
+            <div class="btns-wrap">
+                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                </div>
+                <div>
+                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                </div>
+            </div>
+        </div>
+        <!-- END menu -->
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#menu" class="btn-menu"></a>
             <h1>О нас</h1>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content" class="about-us-content">
             <p>If you haven’t heard, Facebook recently released the Timeline update for brands and companies. As of Wednesday, brands have been given the opportunity to opt in to the new redesign and explore the new features. If you’re unfamiliar with the new features, here is a brief breakdown:</p>
-            <a href="#page1">Page 1</a>
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
         <div data-role="footer" data-id="fixfooter" data-position="fixed">
             <i class="footer-midlle"></i>
-            <a href="#" class="footer-nav footer-nav_joystick"></a>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
             <div class="footer-wrap">
-                <a href="#" class="footer-nav footer-nav_cards  is-active">Карточки</a>
-                <a href="#" class="footer-nav footer-nav_places">Рядом</a>
+                <a href="#my-cards" class="footer-nav footer-nav_cards  is-active">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
             </div>
         </div>
         <!-- END Footer -->
     </div>
     <!-- END page about us -->
+
+    <!-- BEGIN page Messages -->
+    <div data-role="page" data-quicklinks="true" id="messages">
+        <!-- BEGIN menu  -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push">
+            <div class="btns-wrap">
+                <a href="#" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                <div>
+                    <a href="#" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                </div>
+                <div>
+                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                </div>
+            </div>
+        </div>
+        <!-- END menu -->
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#menu" class="btn-menu"></a>
+            <h1>Сообщения</h1>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content" class="jqm-content messages-content">
+            <ul data-role="listview" data-inset="true">
+                <li class="ui-btn-active">
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#message-detail">
+                        <img src="img/img.jpg" alt="">
+                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#my-cards" class="footer-nav footer-nav_cards  is-active">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page Messages -->
+
+    <!-- BEGIN page message detail -->
+    <div data-role="page" id="message-detail">
+        <!-- BEGIN Header -->
+        <div data-role="header" data-id="fixheader" data-position="fixed">
+            <a href="#" class="btn-prev"></a>
+            <h1>Сообщения</h1>
+        </div>
+        <!-- END Header -->
+        <!-- BEGIN Content -->
+        <div data-role="content">
+            <img src="img/img.jpg" alt="">
+            <div class="message__author">От: Aroma Espresso Bar</div>
+            <p>Вы получили бесплатный штампик, спешите получить свое кофе!</p>
+            <div class="qr">
+                <i></i>
+                <div>
+                    <strong>Штампик к акции</strong>
+                    <span>“Каждый 3-й кофе бесплатно”</span>
+                </div>
+            </div>
+            <a href="#" data-role="button" data-inline="true">Активировать</a>
+        </div>
+        <!-- END Content -->
+        <!-- BEGIN Footer -->
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
+            <i class="footer-midlle"></i>
+            <a href="#camera" class="footer-nav footer-nav_joystick"></a>
+            <div class="footer-wrap">
+                <a href="#my-cards" class="footer-nav footer-nav_cards  is-active">Карточки</a>
+                <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
+            </div>
+        </div>
+        <!-- END Footer -->
+    </div>
+    <!-- END page message detail -->
 
 </body>
 </html>
