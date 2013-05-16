@@ -371,14 +371,57 @@
 		background: #894e14;
 	}
 }
+.slider-nav_top {
+	margin: 5px 0 25px;
+}
 .slider-text {
 	margin-top: 5px;
 	text-align: center;
 	font-size: 12px;
 	text-shadow: 0 1px 0 #fff;
 }
+.slider-text_bottom {
+	margin-top: 20px;
+}
 .cycle-slideshow {
 	img {
 		position: absolute;
 	}
+}
+
+.explain {
+	position: absolute;
+	top: 50%;
+	margin-top: -107px;
+	z-index: 2;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	@include got_m;
+	font-size: 12px;
+	p {
+		margin: 10px auto 0;
+		width: 160px;
+		text-align: left;
+	}
+	.ui-link {
+		color: #fff;
+	}
+}
+.explain__img {
+	display: block;
+	margin: 0 auto;
+	width: 140px;
+	height: 141px;
+	background: url(../img/explain.png) 0 0 repeat;
+	@include background-size(100%, 100%);
+	
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.8);
 }

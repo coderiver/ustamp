@@ -109,7 +109,10 @@ a{
     background: url(../img/header-bg.png) 0 0 repeat-x;
     @include background-size(auto, 100%);
     .ui-btn {
-        padding: 5px 3px;
+        padding: 6px 3px;
+        width: 32px;
+        height: 32px;
+        @include box-sizing(border-box);
     }
     .btn-menu {
         .ui-btn-inner {
@@ -120,6 +123,9 @@ a{
         .ui-btn-inner {
             @include icon-svg(goblet, 24, 18);
         }
+    }
+    .btn-info {
+        padding: 6px 5px;
     }
     .ui-title {
         font-size: 18px;
