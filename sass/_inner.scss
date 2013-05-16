@@ -425,3 +425,39 @@
 	left: 0;
 	background: rgba(0,0,0,.8);
 }
+
+.message {
+	text-align: center;
+	font-size: 12px;
+	.qr {
+		margin-top: 30px;
+	}
+	.ui-btn {
+		margin-top: 20px;
+		padding: 0 10px;
+	}
+}
+.message__author {
+	margin: 20px 0 10px;
+	color: #71320B;
+}
+.qr {
+	i {
+		display: inline-block;
+		margin-right: 10px;
+		@include icon-svg(qr, 29, 29);
+		background-repeat: no-repeat;
+		vertical-align: middle;
+		@include rotate(5);
+	}
+	div {
+		text-align: left;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	strong {
+		display: block;
+		color: #71320B;
+		font-weight: normal;
+	}
+}
