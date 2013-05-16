@@ -457,7 +457,96 @@
 	}
 	strong {
 		display: block;
-		color: #71320B;
+		color: #71320b;
 		font-weight: normal;
+	}
+}
+
+.check-wrap {
+	position: relative;
+	.check-counter {
+		position: absolute;
+		right: 20px;
+		top: 14px;
+		z-index: 2;
+		width: 24px;
+		text-align: center;
+		color: #fff;
+		font-size: 12px;
+		text-shadow: 0 1px 0 #bd4900;
+	}
+	.icon {
+		position: absolute;
+		left: 0;
+		top: 15px;
+	}
+}
+.icon_rest {
+	top: 12px;
+	@include sized-spriter($icons, rest);
+}
+.icon_coffe {
+	@include sized-spriter($icons, coffe);
+}
+.icon_parik {
+	@include sized-spriter($icons, parik);
+}
+.icon_cinema {
+	top: 18px;
+	@include sized-spriter($icons, cinema);
+}
+.icon_shop {
+	@include sized-spriter($icons, shop);
+}
+.icon_club {
+	@include sized-spriter($icons, club);
+}
+
+.ui-checkbox {
+	margin-left: 39px;
+	border-radius: 0 !important;  
+	@include user-select;
+	.ui-btn {
+		background: none;
+		border-width: 0 0 1px 0;
+	}
+	.ui-btn-text {
+		font-size: 18px;
+		color: #bd4900;
+	}
+	.ui-btn-inner {
+		padding: 10px 0;
+	}
+	input {
+		opacity: 0;
+	}
+	.ui-icon {
+		width: 52px;
+		height: 17px;
+		@include border-radius(10px); 
+		background-position: 0 0;
+		background-color: transparent;
+		@include background-image(linear-gradient(top, #ff7900, #f50 ));
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 3px;
+			margin-top: -6px;
+			width: 16px;
+			height: 11px;
+			background: #eac07d;
+			@include border-radius(7px);
+		}
+		
+	}
+	.ui-icon-checkbox-on {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 6px;
+			@include icon-svg(check, 12, 14);
+		}
 	}
 }
