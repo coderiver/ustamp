@@ -350,6 +350,9 @@ a{
         top: -32px;
         @include icon-svg(places, 24, 32);  
     }
+    &:active {
+        color: #fff;
+    }
 }
 .footer-nav_places.is-active {
     &:before {
