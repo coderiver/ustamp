@@ -124,6 +124,7 @@
 	@include background-size(auto, 100%);
 }
 .btn-equal {
+	margin: 0 4px;
 	width: 34px;
 	height: 34px;
 	line-height: 28px;
@@ -207,7 +208,7 @@
 	width: 222px;
 	height: 222px;
 	z-index: 1000;
-	@include icon-svg(camera, 222, 222);
+	@include icon-svg(camera, 222, 222);  
 }
 .camera-img {
 	position: absolute;
@@ -226,6 +227,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	margin-bottom: -150px;
 }
 .tooltip {
 	@include box-sizing(border-box);
@@ -294,6 +296,9 @@
 	.slide__overlay {
 		opacity: 1;
 	}
+}
+.slider__to-camera {
+	text-decoration: none;
 }
 .icon-cup {
 	position: absolute;
