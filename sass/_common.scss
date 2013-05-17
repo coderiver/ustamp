@@ -149,6 +149,50 @@ a{
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.is-with-sidebar {
+    .sidebar {
+        width: 190px;
+        margin-left: 0;
+    }
+    .content-wrap {
+        margin-right: -100%;
+    }
+    .map,
+    .camera-img {
+        margin-left: 210px;
+    }
+    .overlay-sidebar {
+        display: block;
+    }
+}
+.sidebar,
+.map,
+.content-wrap,
+.camera-img {
+    @include transition(all 200ms linear);
+}
+.sidebar {
+    position: relative;
+    z-index: 2000;
+    float: left;
+    width: 100%;
+    margin-left: -100%;
+}
+.content-wrap {
+    float: left;
+    width: 100%;
+}
+
+.overlay-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
 .ui-content {
     .ui-btn {
         @include box-shadow(0 1px 0 rgba(255,255,255,.4));

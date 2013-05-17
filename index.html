@@ -18,7 +18,7 @@
     <div data-role="page" id="qr-info">
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#" class="btn-prev" data-role="button"></a>
+            <a href="#camera" class="btn-prev" data-role="button"></a>
             <h1>Наведите на QR-код</h1>
             <a href="#" class="btn-info" data-role="button"></a>
         </div>
@@ -47,21 +47,6 @@
 
     <!-- BEGIN page get QR -->
     <div data-role="page" id="camera">
-        <!-- BEGIN menu  -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push">
-            <div class="btns-wrap">
-                <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
-                </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
-            </div>
-        </div>
-        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
             <a href="#menu" class="btn-menu" data-role="button"></a>
@@ -71,9 +56,30 @@
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content">
-            <i class="camera"></i>
-            <div class="camera-img">
-                <img src="http://lorempixel.com/1200/1200/sports/" alt="">
+            <div class="wrap">
+                <!-- BEGIN menu  -->
+                <div class="sidebar">
+                    <div class="btns-wrap">
+                        <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                        <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                        <div>
+                            <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                        </div>
+                        <div>
+                            <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END menu -->
+                <!-- BEGIN Content wrap -->
+                <div class="content-wrap">
+                    <i class="camera"></i>
+                    <div class="camera-img">
+                        <img src="http://lorempixel.com/1200/1200/sports/" alt="">
+                    </div>
+                </div>
+                <!-- END Content wrap -->
             </div>
         </div>
         <!-- END Content -->
@@ -82,7 +88,7 @@
             <i class="footer-midlle"></i>
             <a href="#camera" class="footer-nav footer-nav_joystick"></a>
             <div class="footer-wrap">
-                <a href="#card-detail" class="footer-nav footer-nav_cards">Карточки</a>
+                <a href="#my-cards" class="footer-nav footer-nav_cards">Карточки</a>
                 <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
             </div>
         </div>
@@ -109,7 +115,7 @@
             data-cycle-slides="> div" 
             data-cycle-pager-template="<span></span>" 
             data-cycle-pager=".js-slider-1" 
-            data-cycle-timeout=3000 
+            data-cycle-timeout=0 
             data-cycle-swipe=true 
             data-cycle-fx=shuffle
             data-cycle-shuffle-top="10"
@@ -205,7 +211,7 @@
             data-cycle-slides="> div" 
             data-cycle-pager-template="<span></span>" 
             data-cycle-pager=".js-slider-2" 
-            data-cycle-timeout=3000 
+            data-cycle-timeout=0 
             data-cycle-swipe=true 
             data-cycle-fx=shuffle
             data-cycle-shuffle-top="10"
@@ -308,7 +314,7 @@
             data-cycle-slides="> div" 
             data-cycle-pager-template="<span></span>" 
             data-cycle-pager=".js-slider-3" 
-            data-cycle-timeout=3000 
+            data-cycle-timeout=0 
             data-cycle-swipe=true 
             data-cycle-fx=shuffle
             data-cycle-shuffle-top="10"
@@ -388,54 +394,58 @@
 
     <!-- BEGIN page My card -->
     <div data-role="page" id="my-cards">
-        <!-- BEGIN menu  -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push">
-            <div class="btns-wrap">
-                <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
-                </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
-            </div>
-        </div>
-        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#menu" class="btn-menu" data-role="button"></a>
+            <a href="#" class="btn-menu" data-role="button"></a>
             <h1>Мои карточки</h1>
             <a href="#filter" class="btn-goblet"></a>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content" class="my-cards-content">
-            <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/800/100/);">
-                <span class="my-card__badge">
-                    <span class="my-card__place">Aroma Espresso Bar</span>
-                    <span class="my-card__place-info">Сеть (4 заведения)</span>
-                </span>
-            </a>
-            <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/801/100/);">
-                <span class="my-card__badge">
-                    <span class="my-card__place">Aroma Espresso Bar</span>
-                    <span class="my-card__place-info">Сеть (4 заведения)</span>
-                </span>
-            </a>
-            <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/802/100/);">
-                <span class="my-card__badge">
-                    <span class="my-card__place">Aroma Espresso Bar</span>
-                    <span class="my-card__place-info">Сеть (4 заведения)</span>
-                </span>
-            </a>
-            <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/803/100/);">
-                <span class="my-card__badge">
-                    <span class="my-card__place">Aroma Espresso Bar</span>
-                    <span class="my-card__place-info">Сеть (4 заведения)</span>
-                </span>
-            </a>
+            <div class="wrap">
+                <!-- BEGIN menu  -->
+                    <div class="sidebar">
+                        <div class="btns-wrap">
+                            <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                            <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                            <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                            <div>
+                                <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                            </div>
+                            <div>
+                                <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END menu -->
+                    <div class="content-wrap">
+                        <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/800/100/);">
+                            <span class="my-card__badge">
+                                <span class="my-card__place">Aroma Espresso Bar</span>
+                                <span class="my-card__place-info">Сеть (4 заведения)</span>
+                            </span>
+                        </a>
+                        <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/801/100/);">
+                            <span class="my-card__badge">
+                                <span class="my-card__place">Aroma Espresso Bar</span>
+                                <span class="my-card__place-info">Сеть (4 заведения)</span>
+                            </span>
+                        </a>
+                        <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/802/100/);">
+                            <span class="my-card__badge">
+                                <span class="my-card__place">Aroma Espresso Bar</span>
+                                <span class="my-card__place-info">Сеть (4 заведения)</span>
+                            </span>
+                        </a>
+                        <a href="#card-detail" class="my-card" style="background-image:url(http://lorempixel.com/803/100/);">
+                            <span class="my-card__badge">
+                                <span class="my-card__place">Aroma Espresso Bar</span>
+                                <span class="my-card__place-info">Сеть (4 заведения)</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
@@ -453,40 +463,44 @@
 
     <!-- BEGIN page login -->
     <div data-role="page" id="login">
-        <!-- BEGIN menu  -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push">
-            <div class="btns-wrap">
-                <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
-                </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
-            </div>
-        </div>
-        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#menu" class="btn-menu"></a>
+            <a href="#" class="btn-menu"></a>
             <h1>Войти</h1>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content" class="login-content">
-            <div data-role="fieldcontain">
-                <input type="text" name="name" placeholder="E-mail">
+            <div class="wrap">
+                <!-- BEGIN menu  -->
+                <div class="sidebar">
+                    <div class="btns-wrap">
+                        <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                        <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                        <div>
+                            <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                        </div>
+                        <div>
+                            <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END menu -->
+                <div class="content-wrap">
+                    <div data-role="fieldcontain">
+                        <input type="text" name="name" placeholder="E-mail">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <input type="password" name="name"placeholder="Пароль">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <button type="submit" name="submit" value="submit-value">Войти</button>
+                    </div>
+                    <a href="#" class="fb-connect-link"></a>
+                    <a href="#" class="forgot-pass-link">Забыли пароль?</a>
+                </div>
             </div>
-            <div data-role="fieldcontain">
-                <input type="password" name="name"placeholder="Пароль">
-            </div>
-            <div data-role="fieldcontain">
-                <button type="submit" name="submit" value="submit-value">Войти</button>
-            </div>
-            <a href="#" class="fb-connect-link"></a>
-            <a href="#" class="forgot-pass-link">Забыли пароль?</a>
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
@@ -504,41 +518,45 @@
 
     <!-- BEGIN page creat account -->
     <div data-role="page" id="register">
-        <!-- BEGIN menu  -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push">
-            <div class="btns-wrap">
-                <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
-                </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
-            </div>
-        </div>
-        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#menu" class="btn-menu"></a>
+            <a href="#" class="btn-menu"></a>
             <h1>Создать аккаунт</h1>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content" class="login-content">
-            <div data-role="fieldcontain">
-                <input type="text" name="name" placeholder="E-mail">
+            <div class="wrap">
+                <!-- BEGIN menu  -->
+                <div class="sidebar">
+                    <div class="btns-wrap">
+                        <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                        <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                        <div>
+                            <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                        </div>
+                        <div>
+                            <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END menu -->
+                <div class="content-wrap">
+                    <div data-role="fieldcontain">
+                        <input type="text" name="name" placeholder="E-mail">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <input type="password" name="name"placeholder="Пароль">
+                    </div>
+                    <div data-role="fieldcontain">
+                        <button type="submit" name="submit" value="submit-value">Создать</button>
+                    </div>
+                    <a href="#" class="fb-connect-link"></a>
+                    <p>Продолжая, вы соглашаетесь с нашим <a href="#">Пользовательским соглашением</a></p>
+                    <p class="ha-ha-funny">И кстати, мы никогда не будем расространять вашу информацию либо слать вам спам.</p>
+                </div>
             </div>
-            <div data-role="fieldcontain">
-                <input type="password" name="name"placeholder="Пароль">
-            </div>
-            <div data-role="fieldcontain">
-                <button type="submit" name="submit" value="submit-value">Создать</button>
-            </div>
-            <a href="#" class="fb-connect-link"></a>
-            <p>Продолжая, вы соглашаетесь с нашим <a href="#">Пользовательским соглашением</a></p>
-            <p class="ha-ha-funny">И кстати, мы никогда не будем расространять вашу информацию либо слать вам спам.</p>
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
@@ -556,21 +574,6 @@
 
     <!-- BEGIN page MAP -->
     <div data-role="page" id="map">
-        <!-- BEGIN menu  -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push">
-            <div class="btns-wrap">
-                <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
-                </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
-            </div>
-        </div>
-        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
             <a href="#menu" class="btn-menu"></a>
@@ -580,15 +583,34 @@
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content">
-            <div class="map">
-                <a href="#card-detail" class="tooltip" style="left:100px;top:100px">
-                    <img class="tooltip__img" src="http://lorempixel.com/38/38/" alt="">
-                    <div class="tooltip__main">
-                        <span class="tooltip__title">AROMA</span>
-                        <span class="tooltip__info">ул. Прорезная, 100</span>
+            <div class="wrap">
+                <!-- BEGIN menu  -->
+                <div class="sidebar">
+                    <div class="btns-wrap">
+                        <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                        <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                        <div>
+                            <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                        </div>
+                        <div>
+                            <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                        </div>
                     </div>
-                </a>
-                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ru/?ie=UTF8&amp;ll=55.354135,40.297852&amp;spn=21.737349,67.631836&amp;t=m&amp;z=5&amp;output=embed"></iframe>
+                </div>
+                <!-- END menu -->
+                <div class="content-wrap">
+                    <div class="map">
+                        <a href="#card-detail" class="tooltip" style="left:100px;top:100px">
+                            <img class="tooltip__img" src="http://lorempixel.com/38/38/" alt="">
+                            <div class="tooltip__main">
+                                <span class="tooltip__title">AROMA</span>
+                                <span class="tooltip__info">ул. Прорезная, 100</span>
+                            </div>
+                        </a>
+                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ru/?ie=UTF8&amp;ll=55.354135,40.297852&amp;spn=21.737349,67.631836&amp;t=m&amp;z=5&amp;output=embed"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- END Content -->
@@ -673,21 +695,6 @@
 
     <!-- BEGIN page about us -->
     <div data-role="page" id="about">
-        <!-- BEGIN menu  -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push">
-            <div class="btns-wrap">
-                <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
-                </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
-            </div>
-        </div>
-        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
             <a href="#menu" class="btn-menu"></a>
@@ -696,7 +703,26 @@
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content" class="about-us-content">
-            <p>If you haven’t heard, Facebook recently released the Timeline update for brands and companies. As of Wednesday, brands have been given the opportunity to opt in to the new redesign and explore the new features. If you’re unfamiliar with the new features, here is a brief breakdown:</p>
+            <div class="wrap">
+                <!-- BEGIN menu  -->
+                <div class="sidebar">
+                    <div class="btns-wrap">
+                        <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                        <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                        <div>
+                            <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                        </div>
+                        <div>
+                            <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END menu -->
+                <div class="content-wrap">
+                    <p>If you haven’t heard, Facebook recently released the Timeline update for brands and companies. As of Wednesday, brands have been given the opportunity to opt in to the new redesign and explore the new features. If you’re unfamiliar with the new features, here is a brief breakdown:</p>
+                </div>
+            </div>
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
@@ -714,103 +740,107 @@
 
     <!-- BEGIN page Messages -->
     <div data-role="page" data-quicklinks="true" id="messages">
-        <!-- BEGIN menu  -->
-        <div data-role="panel" id="menu" data-position="left" data-display="push">
-            <div class="btns-wrap">
-                <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
-                <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
-                <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
-                <div>
-                    <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
-                </div>
-                <div>
-                    <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
-                </div>
-            </div>
-        </div>
-        <!-- END menu -->
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#menu" class="btn-menu"></a>
+            <a href="#" class="btn-menu"></a>
             <h1>Сообщения</h1>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content" class="jqm-content messages-content">
-            <ul data-role="listview" data-inset="true">
-                <li class="ui-btn-active">
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#message-detail">
-                        <img src="img/img.jpg" alt="">
-                        <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
-                    </a>
-                </li>
-            </ul>
+            <div class="wrap">
+                <!-- BEGIN menu  -->
+                <div class="sidebar">
+                    <div class="btns-wrap">
+                        <a href="#messages" data-role="button" data-inline="true" class="btn-equal btn-email">12</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-edit"></a>
+                        <a href="#about" data-role="button" data-iconpos="notext" data-inline="true" class="btn-equal btn-info"></a>
+                        <div>
+                            <a href="#login" data-role="button" data-inline="true" class="bnt-enter-reg">Вход / Регистрация</a>
+                        </div>
+                        <div>
+                            <a class="btn-import" href="#" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Импорт</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END menu -->
+                <div class="content-wrap">
+                    <ul data-role="listview" data-inset="true">
+                        <li class="ui-btn-active">
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#message-detail">
+                                <img src="img/img.jpg" alt="">
+                                <div class="message-text">Вы получили бесплатный штампик, спешите получить свое кофе!</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
@@ -830,7 +860,7 @@
     <div data-role="page" id="message-detail">
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
-            <a href="#" class="btn-prev"></a>
+            <a href="#messages" class="btn-prev"></a>
             <h1>Сообщения</h1>
         </div>
         <!-- END Header -->
@@ -861,6 +891,6 @@
         <!-- END Footer -->
     </div>
     <!-- END page message detail -->
-
+    <div class="overlay-sidebar js-overlay"></div>
 </body>
 </html>
