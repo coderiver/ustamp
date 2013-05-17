@@ -404,7 +404,8 @@
 .slider-nav {
 	margin-top: 33px;
 	text-align: center;
-	button {
+	span {
+		display: inline-block;
 		margin-right: 6px;
 		width: 8px;
 		height: 8px;
