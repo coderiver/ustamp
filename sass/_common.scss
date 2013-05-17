@@ -88,6 +88,7 @@ a{
     text-shadow: none;
     font-weight: normal;
     @include got_m;
+    font-size: 11px;
     .ui-link {
         color: #bd4900;
         text-shadow: none;
@@ -95,8 +96,6 @@ a{
     }
 }  
 .ui-page {
-    @include got_m;
-    font-size: 11px;
     background: none;  
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */

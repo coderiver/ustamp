@@ -79,6 +79,7 @@
 	line-height: 15px;
 	color: #bd4900;
 	text-shadow: none;
+	@include got_r;
 }
 
 // My cards page
@@ -228,6 +229,9 @@
 	bottom: 0;
 	left: 0;
 	margin-bottom: -150px;
+	a {
+		text-decoration: none;
+	}
 }
 .tooltip {
 	@include box-sizing(border-box);
@@ -571,6 +575,7 @@
 	.ui-btn-text {
 		font-size: 18px;
 		color: #bd4900;
+		@include got_r;
 	}
 	.ui-btn-inner {
 		padding: 10px 0;

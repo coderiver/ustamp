@@ -4,33 +4,40 @@
 @import "lib/media";
 @import "lib/ceaser-easing/ceaser";
 @font-face {
-  font-family: 'Conv_HelveticaNeueCyr-Roman';
-  src: local('☺'), url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'gotham_probold';
+    src: url('../fonts/gothaprobol-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Conv_HelveticaNeueCyr-Medium';
-  src: local('☺'), url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'gotham_prolight';
+    src: url('../fonts/gothaprolig-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Conv_HelveticaNeueCyr-Bold';
-  src: local('☺'), url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'gotham_promedium';
+    src: url('../fonts/gothapromed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: 'gotham-lightgotham-light';
-    src: local('☺'), url('../fonts/gothmlig-webfont.woff') format('woff');
+    font-family: 'gotham_proregular';
+    src: url('../fonts/gothaproreg-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
-    font-family: 'gotham-mediumgotham-medium';
-    src: local('☺'), url('../fonts/gothmmed-webfont.woff') format('woff');
+    font-family: 'helveticaneuecyrbold';
+    src: url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticaneuecyrmedium';
+    src: url('../fonts/helveticaneuecyr-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -208,28 +215,33 @@ $break-large: 1180px;
 }  
 
 // fonts
-@mixin hel_r {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'Conv_HelveticaNeueCyr-Roman', sans-serif;
-}
 @mixin hel_m {
     font-weight: normal;
     font-style: normal;
-    font-family: 'Conv_HelveticaNeueCyr-Medium', sans-serif;
+    font-family: 'helveticaneuecyrmedium', sans-serif;
 }
 @mixin hel_b {
     font-weight: normal;
     font-style: normal;
-    font-family: 'Conv_HelveticaNeueCyr-Bold', sans-serif;
+    font-family: 'helveticaneuecyrbold', sans-serif;
 }
 @mixin got_l {
     font-weight: normal;
     font-style: normal;
-    font-family: 'gotham-lightgotham-light', sans-serif;
+    font-family: 'gotham_prolight', sans-serif;
 }
 @mixin got_m {
     font-weight: normal;
     font-style: normal;
-    font-family: 'gotham-mediumgotham-medium', sans-serif;
+    font-family: 'gotham_promedium', sans-serif;
+}
+@mixin got_b {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'gotham_probold', sans-serif;
+}
+@mixin got_r {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'gotham_proregular', sans-serif;
 }
