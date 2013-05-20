@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="css/screen.css">
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery.mobile-1.3.1.min.js"></script>
-    <script src="js/jquery.cycle2.min.js"></script>
-    <script src="js/jquery.cycle2.shuffle.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -111,18 +109,8 @@
         <a href="#card-details-reward-redeemed">card-details-reward-redeemed</a>
         <div data-role="content">
             <div class="slider-text">Выбери карточку интересующей акции</div>
-            <div class="slider cycle-slideshow" 
-            data-cycle-slides="> div" 
-            data-cycle-pager-template="<span></span>" 
-            data-cycle-pager=".js-slider-1" 
-            data-cycle-timeout=0 
-            data-cycle-swipe=true 
-            data-cycle-fx=shuffle
-            data-cycle-shuffle-top="10"
-            data-cycle-shuffle-left="-5"
-            data-cycle-hide-non-active=false
-            >
-                <div class="slide" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+            <div class="slider">
+                <div class="slide is-active">
                     <div class="slide__top">
                         Каждый 5-й американо в подарок
                     </div>
@@ -139,7 +127,7 @@
                         2 штампа осталось
                     </div>
                 </div>
-                <div class="slide" data-cycle-slide-css='{ "top": "10px",   "left": "10px" }'>
+                <div class="slide">
                     <div class="slide__top">
                         Каждый 5-й американо в подарок
                     </div>
@@ -149,6 +137,46 @@
                             <li class="slide__item"><i class="slide__qr"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__top">
+                        Каждый 5-й американо в подарок
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"></li>
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__top">
+                        Каждый 5-й американо в подарок
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
@@ -207,18 +235,8 @@
         <div data-role="content">
             <div class="slider-text">Выбери карточку интересующей акции</div>
             <div class="slider-nav slider-nav_top js-slider-2"></div>
-            <div class="slider cycle-slideshow" 
-            data-cycle-slides="> div" 
-            data-cycle-pager-template="<span></span>" 
-            data-cycle-pager=".js-slider-2" 
-            data-cycle-timeout=0 
-            data-cycle-swipe=true 
-            data-cycle-fx=shuffle
-            data-cycle-shuffle-top="10"
-            data-cycle-shuffle-left="-5"
-            data-cycle-hide-non-active=false
-            >
-                <div class="slide slide_finish" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+            <div class="slider">
+                <div class="slide slide_finish">
                     <div class="slide__top">
                         Поздравляем!
                        <a href="#camera" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>
@@ -241,7 +259,7 @@
                         Готово!
                     </div>
                 </div>
-                <div class="slide slide_finish" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+                <div class="slide slide_finish">
                     <div class="slide__top">
                         Поздравляем!
                         <a href="#camera" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>
@@ -310,18 +328,8 @@
         <div data-role="content">
             <div class="slider-text">Выбери карточку интересующей акции</div>
             <div class="slider-nav slider-nav_top js-slider-3"></div>
-            <div class="slider cycle-slideshow" 
-            data-cycle-slides="> div" 
-            data-cycle-pager-template="<span></span>" 
-            data-cycle-pager=".js-slider-3" 
-            data-cycle-timeout=0 
-            data-cycle-swipe=true 
-            data-cycle-fx=shuffle
-            data-cycle-shuffle-top="10"
-            data-cycle-shuffle-left="-5"
-            data-cycle-hide-non-active=false
-            >
-                <div class="slide slide_done" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+            <div class="slider">
+                <div class="slide slide_done">
                     <div class="slide__top">
                         Ну что, по новой!
                        <a href="#camera" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>
@@ -340,7 +348,7 @@
                         Готово!
                     </div>
                 </div>
-                <div class="slide slide_done" data-cycle-slide-css='{ "top": "-5px",  "left": "5px" }'>
+                <div class="slide slide_done">
                     <div class="slide__top">
                         Ну что, по новой!
                         <a href="#camera" data-role="button" data-iconpos="notext" data-inline="true" class="btn-back"></a>

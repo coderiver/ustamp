@@ -281,6 +281,67 @@
 	position: relative;
 	@include user-select; 
 	margin-top: 15px;
+	height: 200px;
+	.is-active {
+		z-index: 1000;
+	}
+	.is-disabled {
+		@include switch-on-gpu;
+		-webkit-animation-play-state: running;
+    	animation-play-state: running;
+	}
+}
+.is-left-swipe {
+	.is-disabled {
+		@include animation(anim-left 1s linear 1);
+	}
+}
+.is-right-swipe {
+	.is-disabled {
+		@include animation(anim-right 1s linear 1);
+	}
+}
+@include keyframes(anim-left) {
+    0% {
+        left: -50%;
+        z-index: 2000;
+    }
+    25% {
+        left: -120%;
+        //top: -30px;
+        z-index: -1;
+    }
+    50% {
+        left: -50%;
+        //top: -10px;
+    } 
+    75% {
+       left: 0;
+    }
+    100% {
+        //top: 0;
+    }
+}
+@include keyframes(anim-right) {
+    0% {
+        left: 50%;
+        z-index: 2000;
+    }
+    25% {
+        left: 120%;
+        //top: -30px;
+        z-index: -1;
+    }
+    50% {
+        left: 50%;
+        //top: -10px;
+    } 
+    75% {
+       left: 0;
+    }
+    100% {
+        //top: 0;
+    }
 }
 .slide {
 	position: absolute;
@@ -290,6 +351,22 @@
 	@include background-size(50%, 50%);
 	@include border-radius(7px);
 	@include box-shadow(0 0 5px rgba(0,0,0,.5));
+	&:nth-child(1) {
+		top: -10px;
+		left: -5px;
+	}
+	&:nth-child(2) {
+		top: -20px;
+		left: 10px;
+	}
+	&:nth-child(3) {
+		top: 10px;
+		left: 5px;
+	}
+	&:nth-child(4) {
+		top: 20px;
+		left: -10px;
+	}
 }
 .slide_done {
 	.slide__top {

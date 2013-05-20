@@ -404,7 +404,7 @@ a{
     }
 }
 .footer-nav_joystick {
-    left: 50%;
+    left: 50%;  
     top: -35px;  
     margin-left: -42px !important;  
     @include icon-svg(joystick, 85, 85);
@@ -412,4 +412,6 @@ a{
         @include icon-svg(joystick, 85, 85);
     }
 }
+
+
 /* -------------------------------------- //END Footer ------------------------------------------- */
