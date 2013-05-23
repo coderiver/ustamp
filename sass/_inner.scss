@@ -85,6 +85,7 @@
 // My cards page
 .my-cards-content {
 	padding: 10px !important;
+	overflow: visible;
 }
 .my-card {
 	position: relative;
@@ -117,7 +118,22 @@
 	@include hel_m;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
-
+.more-cards {
+	margin-top: 44px;
+	padding-right: 10px;
+	text-align: right;
+	font-size: 12px;
+	@include hel_m;
+	text-shadow: 0 1px 0 #fff;
+	span {
+		display: block;
+	}
+	i {
+		display: inline-block;
+		margin: 10px 19px 0 0;
+		@include icon-svg(arr2, 31, 41);
+	}
+}
 .btns-wrap {
 	display: inline-block;
 	padding-right: 24px;
