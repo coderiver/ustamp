@@ -108,6 +108,7 @@ a{
     background: url(../img/header-bg.png) 0 0 repeat-x;
     @include background-size(auto, 100%);
     .ui-btn {
+        margin-top: 4px;
         padding: 6px 3px;
         width: 32px;
         height: 32px;
