@@ -414,14 +414,20 @@
 }
 .slide__top {
 	height: 52px; 
-	line-height: 52px; 
-	padding-left: 20px;
+	padding: 0 10px;
+	line-height: 52px;
 	color: #fff;
 	font-size: 15px;
+	text-align: center;
 	@include got_l;
-	white-space: nowrap;
 	text-overflow: ellipsis;
 	text-shadow: 0 1px 0 #000;
+	@include box-sizing(border-box);
+}
+.slide__top-title {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.2;
 }
 .slide__middle {
 	position: relative;
