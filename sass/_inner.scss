@@ -86,6 +86,9 @@
 .my-cards-content {
 	padding: 10px !important;
 	overflow: visible;
+	.content-wrap {
+		padding-bottom: 87px;
+	}
 }
 .my-card {
 	position: relative;
@@ -119,11 +122,14 @@
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
 .more-cards {
-	margin-top: 44px;
+	position: absolute;
+	right: 12px;
+	top: -100px;
 	padding-right: 10px;
 	text-align: right;
 	font-size: 12px;
 	@include hel_m;
+	color: #bd4900;
 	text-shadow: 0 1px 0 #fff;
 	span {
 		display: block;
@@ -366,7 +372,7 @@
 	background: url(../img/slide.png) 0 0;
 	@include background-size(50%, 50%);
 	@include border-radius(7px);
-	@include box-shadow(0 0 5px rgba(0,0,0,.5));
+	//@include box-shadow(0 0 5px rgba(0,0,0,.5));
 	&:nth-child(1) {
 		top: -10px;
 		left: -5px;
@@ -382,6 +388,44 @@
 	&:nth-child(4) {
 		top: 20px;
 		left: -10px;
+	}
+}
+.slide_img {
+	background: url(../img/1.jpg) 0 0 no-repeat;
+	@include background-size(100%, 100%);
+	&:nth-child(1) {
+		top: -10px;
+		left: -5px;
+	}
+	&:nth-child(2) {
+		top: -20px;
+		left: 10px;
+		background: url(../img/2.jpg) 0 0 no-repeat;
+		@include background-size(100%, 100%);
+	}
+	&:nth-child(3) {
+		top: 10px;
+		left: 5px;
+		background: url(../img/3.jpg) 0 0 no-repeat;
+		@include background-size(100%, 100%);
+	}
+	&:nth-child(4) {
+		top: 20px;
+		left: -10px;
+		background: url(../img/1.jpg) 0 0 no-repeat;
+		@include background-size(100%, 100%);
+	}
+	&:nth-child(5) {
+		top: -20px;
+		left: -10px;
+		background: url(../img/2.jpg) 0 0 no-repeat;
+		@include background-size(100%, 100%);
+	}
+	&:nth-child(6) {
+		top: -10px;
+		left: -10px;
+		background: url(../img/3.jpg) 0 0 no-repeat;
+		@include background-size(100%, 100%);
 	}
 }
 .slide_done {
@@ -533,6 +577,9 @@
 	text-align: center;
 	font-size: 12px;
 	text-shadow: 0 1px 0 #fff;
+	ul {
+		list-style: none;
+	}
 }
 .slider-text_bottom {
 	margin-top: 20px;
