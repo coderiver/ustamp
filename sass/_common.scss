@@ -66,6 +66,7 @@ a{
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .ui-header {
+    height: 50px;
     @include box-shadow(0 1px 0 rgba(0,0,0,.2));
     border: 0;
     text-shadow: 0 1px 1px #000;
@@ -109,6 +110,14 @@ a{
             
         }
     }
+}
+
+.header__radio-wrap {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    margin-left: -64px;
+    width: 128px;
 }
 
 /* -------------------------------------- //END Header ------------------------------------------ */
@@ -234,6 +243,19 @@ a{
 }
 .ui-panel {
     border: 0;
+}
+
+.ui-radio {
+    .ui-btn {
+        width: 64px;
+        padding: 0;
+        .ui-btn-inner {
+            padding: .55em 5px .5em !important;
+        }
+    }
+    .ui-radio-on {
+        @include background-image(linear-gradient(left, #fa3b01, #fa6503));
+    }  
 }
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */

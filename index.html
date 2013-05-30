@@ -773,7 +773,16 @@
         <!-- BEGIN Header -->
         <div data-role="header" data-id="fixheader" data-position="fixed">
             <a href="#" class="btn-menu"></a>
-            <h1>Сообщения</h1>
+            <div class="header__radio-wrap">
+                <form>
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <input type="radio" name="radio-choice-h-6" id="radio-choice-h-6a" value="on" checked="checked">
+                        <label for="radio-choice-h-6a">Карта</label>
+                        <input type="radio" name="radio-choice-h-6" id="radio-choice-h-6b" value="off">
+                        <label for="radio-choice-h-6b">Список</label>
+                    </fieldset>
+                </form>
+            </div>
         </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
