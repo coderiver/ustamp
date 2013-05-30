@@ -25,9 +25,11 @@
 	.ui-listview {
 		@include box-shadow(none);
 		.ui-btn {
+			padding: 4px 0;
 			background: none;
 			border-width: 0 0 1px 0;	
 			@include border-radius(0);
+			border-color: #b48640;
 			&:first-child {
 				border-top-width: 1px;
 			}
@@ -44,17 +46,6 @@
 		.ui-btn-inner {
 			border: 0;
 		}
-		.ui-li-thumb {
-			position: static;
-			float: none;
-			margin-right: 7px;
-			padding-right: 10px;
-			width: 37px;
-			height: 37px;
-			@include border-radius(0);
-			border-right: 1px solid #bd4900;
-			vertical-align: middle;
-		}
 		.ui-link-inherit {
 			padding-left: 10px !important;
 			min-height: 50px !important;
@@ -70,16 +61,50 @@
 		}
 	}
 }
-
-.message-text {
+.message-img {
+	display: inline-block !important;  
+	margin-right: 7px;
+	padding: 0 !important;
+	vertical-align: middle;
+	width: 37px;
+	height: 37px;
+	img {
+		margin-top: 7px;
+		width: 37px;
+		height: 37px;
+	}
+}
+.message-boby {
 	display: inline-block;
 	vertical-align: middle;
+}
+.message-title {
+	display: block;
+	color: #543300 !important;
+	font-size: 18px;
+	text-shadow: none;
+	text-decoration: none;
+}
+.message-text {
 	white-space: normal;
 	font-size: 12px;
 	line-height: 15px;
 	color: #bd4900;
 	text-shadow: none;
 	@include got_r;
+}
+
+.choose-address {
+	display: inline-block;
+	height: 17px;
+	line-height: 17px;
+	padding: 0 7px;
+	@include border-radius(5px);
+	border: 1px solid #bd4900;
+	@include background(linear-gradient(bottom, #f50, #ff7900));
+	color: #fff !important;
+	text-shadow: 0 1px 0 rgba(0,0,0,.8);
+	text-decoration: none;
 }
 
 // My cards page
