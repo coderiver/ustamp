@@ -53,11 +53,11 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 $icons-svg: "icons-svg/";
 
 // responsive
-$break-small: 500px;
+$break-640: 640px;
 $break-large: 1180px;
 @mixin respond-to($media) {
-  @if $media == pda {
-    @media only screen and (max-width: $break-small) { @content; }
+  @if $media == 640 {
+    @media only screen and (max-width: $break-640) { @content; }
   }
   @else if $media == wide {
     @media only screen and (min-width: $break-large) { @content; }

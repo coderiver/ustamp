@@ -104,6 +104,11 @@ $(".js-slider").each(function(){
         
 });
 
-
+    var slide = $(".slide__item");
+    slide.each(function(){
+        var slider = $(this).parent();
+        var i = slider.find(".slide__item").length;
+        slider.addClass('slide__list-'+i);
+    });
 
 });
