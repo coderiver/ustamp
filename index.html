@@ -9,7 +9,8 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery.mobile-1.3.1.min.js"></script>
-    
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.cycle2.swipe.min.js"></script>
     <script src="js/common.js"></script>
 </head>
 <body>
@@ -99,11 +100,11 @@
    <!-- BEGIN page Card detail -->
     <div data-role="page" id="card-detail">
         <!-- BEGIN Header -->
-        <!-- <div data-role="header" data-id="fixheader" data-position="fixed">
+        <div data-role="header" data-id="fixheader" data-position="fixed">
             <a href="#camera" class="btn-prev"></a>
             <h1>Aroma Espresso Bar</h1>
             <a href="#about" class="btn-info"></a>
-        </div> -->
+        </div>
         <!-- END Header -->
         <!-- BEGIN Content -->
         <div data-role="content">
@@ -111,7 +112,7 @@
             <a href="#card-details-reward-redeemed">card-details-reward-redeemed</a>
             <div class="slider-nav js-slider-pager"></div>
             <div class="slider-text">Выбери карточку интересующей акции</div>
-            <div class="slider js-slider">
+            <!-- <div class="slider js-slider">
                 <div class="slide">
                     <div class="slide__top">
                         <span class="slide__top-title">Каждый 5-й американо в подарок</span>
@@ -157,6 +158,120 @@
                             <li class="slide__item"><i class="slide__qr"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__top">
+                        <span class="slide__top-title">Каждый 5-й американо в подарок</span>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="cycle-slideshow" 
+                data-cycle-fx="scrollHorz"
+                data-cycle-timeout="0"
+                data-cycle-manual-speed="500"
+                data-cycle-slides="> div"
+                data-cycle-swipe=true
+                >
+                <div class="slide">
+                    <div class="slide__top">
+                        <span class="slide__top-title">Каждый 5-й американо в подарок</span>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__top">
+                        <span class="slide__top-title">Каждый 5-й американо в подарок</span>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__top">
+                        <span class="slide__top-title">Каждый 5-й американо в подарок</span>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="slide__bottom">
+                        2 штампа осталось
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide__top">
+                        <span class="slide__top-title">Каждый 5-й американо в подарок</span>
+                    </div>
+                    <div class="slide__middle">
+                        <ul class="slide__list">
+                            <li class="slide__item"><i class="slide__qr"></i></li>
+                            <li class="slide__item"><i class="slide__qr"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
                             <li class="slide__item"><i class="slide__qr is-inactive"></i></li>
@@ -210,7 +325,7 @@
         </div>
         <!-- END Content -->
         <!-- BEGIN Footer -->
-        <!-- <div data-role="footer" data-id="fixfooter" data-position="fixed">
+        <div data-role="footer" data-id="fixfooter" data-position="fixed">
             <i class="footer-midlle"></i>
             <a href="#camera" class="footer-nav footer-nav_joystick"></a>
             <div class="footer-wrap">
@@ -219,7 +334,7 @@
                 <a href="#my-cards" class="footer-nav footer-nav_cards">Карточки</a>
                 <a href="#map" class="footer-nav footer-nav_places">Рядом</a>
             </div>
-        </div> -->
+        </div>
         <!-- END Footer -->
     </div>
     <!-- END page Card detail -->
@@ -924,47 +1039,5 @@
     </div>
     <!-- END page message detail -->
     <div class="overlay-sidebar js-overlay"></div>
-    <script type="text/javascript">
-        // var carousel,
-        //     el,
-        //     i,
-        //     page,
-        //     slides = [
-        //         '<strong>Swipe</strong> to know more &gt;&gt;&gt;<br>Or scroll down for <em>Lorem Ipsum</em>',
-        //         '1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.',
-        //         '2. A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law.',
-        //         '3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.'
-        //     ];
-
-        // carousel = new SwipeView('#wrapper', {
-        //     numberOfPages: slides.length,
-        //     hastyPageFlip: true
-        // });
-
-        // // Load initial data
-        // for (i=0; i<3; i++) {
-        //     page = i==0 ? slides.length-1 : i-1;
-
-        //     el = document.createElement('span');
-        //     el.innerHTML = slides[page];
-        //     carousel.masterPages[i].appendChild(el)
-        // }
-
-        // carousel.onFlip(function () {
-        //     var el,
-        //         upcoming,
-        //         i;
-
-        //     for (i=0; i<3; i++) {
-        //         upcoming = carousel.masterPages[i].dataset.upcomingPageIndex;
-
-        //         if (upcoming != carousel.masterPages[i].dataset.pageIndex) {
-        //             el = carousel.masterPages[i].querySelector('span');
-        //             el.innerHTML = slides[upcoming];
-        //         }
-        //     }
-        // });
-
-</script>
 </body>
 </html>
