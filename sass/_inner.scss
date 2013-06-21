@@ -630,6 +630,7 @@
 
 .slide-collaps {
 	@include border-radius(7px);
+	@include box-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 	.slide__top {
 		padding: 0;
 		.ui-btn {
