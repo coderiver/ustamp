@@ -642,6 +642,10 @@
 			@include box-sizing(border-box);
 			background: url(../img/slide.png) 0 0;
 		}
+		.ui-btn-inner {
+			white-space: normal;
+			padding-left: 0;
+		}
 		.ui-btn-text {
 			color: #fff;
 			font-size: 15px;
