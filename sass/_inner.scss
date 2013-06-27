@@ -34,7 +34,7 @@
 				border-top-width: 1px;
 			}
 		}
-		.ui-btn-active {
+		.ui-btn-active {  
 			background: rgba(159,109,0,.1);
 			.ui-icon {
 				@include icon-svg(arr1-act, 6, 11); 
@@ -50,7 +50,7 @@
 			padding-left: 10px !important;
 			min-height: 50px !important;
 			@include box-sizing(border-box);
-		}
+		}   
 		.ui-icon {
 			margin-top: -5px;
 			@include icon-svg(arr1, 6, 11); 
@@ -214,14 +214,14 @@
 		@include icon-svg(edit, 13, 19);  
 	}
 }
-.btn-info {
+.btn-info {   
 	.ui-btn-inner {
 		@include icon-svg(info, 18, 18);  
 	}
 }
 .bnt-enter-reg {
 	text-align: left;
-	padding-left: 7px;
+	padding-left: 7px;  
 	width: 127px;
 }
 .btn-import {
@@ -235,7 +235,7 @@
 	}
 	.ui-btn-text {
 		margin-left: 35px;
-	}
+	}  
 }
 .btn-back {
 	float: right;
@@ -277,7 +277,7 @@
 	left: 0;
 	margin-bottom: -150px;
 	a {
-		text-decoration: none;
+		text-decoration: none;  
 	}
 }
 .tooltip {
