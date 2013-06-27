@@ -98,12 +98,12 @@ a{
         @include hel_b;
     }
     .btn-prev {
-        @include icon-svg(prev, 44, 33);  
+        @include icon-svg(prev, 44, 33);   
         background-color: transparent;
         @include box-shadow(none);
         border: none;
         &:hover {
-            @include icon-svg(prev-h, 44, 33);  
+            //@include icon-svg(prev-h, 44, 33);  
             background-color: transparent;
         }
         .ui-btn-inner {  

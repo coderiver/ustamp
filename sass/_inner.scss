@@ -198,7 +198,7 @@
 		top: -16px;
 		width: 16px;
 		height: 16px;
-		line-height: 15px;
+		line-height: 15px;  
 		@include box-sizing(border-box);
 		background: #bd4900;
 		border: 1px solid #ffe417;
@@ -210,7 +210,7 @@
 	}
 }
 .btn-edit {
-	.ui-btn-inner {
+	.ui-btn-inner {  
 		@include icon-svg(edit, 13, 19);  
 	}
 }
